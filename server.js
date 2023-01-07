@@ -1,6 +1,8 @@
 // import modules
 
 import express from 'express'
+import { tricks } from './data/tricks-data.js'
+
 
 // Create Express app
 
@@ -24,7 +26,11 @@ app.get('/home', function(req, res){
   res.render('home')
 })
 
-
+app.get('/tricks', function(req, res){
+  res.render('tricks/index',{
+    tricks: tricks
+  })
+})
 // Tell the app to listen on port 3000
 
 app.listen(3000, function() {

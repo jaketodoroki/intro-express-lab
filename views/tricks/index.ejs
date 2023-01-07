@@ -4,9 +4,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cool Skateboarding Tricks😏</title>
+  <title>Tricks Index</title>
 </head>
 <body>
-  <h1>Home Page</h1>
+  <h1>Cool Tricks</h1>
+  <ul>
+    <% tricks.forEach(tricks => { %>
+     <li>
+      <%= tricks.text %>
+       - 
+       <%= tricks.cool ? 'cool' : 'not cool' %> 
+     </li>
+    <% }) %>
+  </ul>
 </body>
 </html>
