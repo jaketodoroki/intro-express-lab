@@ -8,7 +8,7 @@ const app = express()
 
 // Configure the app (app.set)
 
-
+app.set('view engine', 'ejs')
 
 // Mount Middleware (app.use)
 
@@ -18,6 +18,10 @@ const app = express()
 
 app.get('/', function(req, res){
   res.send('<h1> HIIIII </h1>')
+})
+
+app.get('/home', function(req, res){
+  res.render('home')
 })
 
 
